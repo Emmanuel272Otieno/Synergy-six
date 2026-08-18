@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synergy Six | Community</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            🤝 <span>Synergy Six</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="community.html" class="active">Community</a>
+            <a href="skills.html">Digital Skills</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="themeBtn">🌙</button>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="community-hero">
+
+        <div class="hero-content">
+
+            <span class="small-title">OUR COMMUNITY</span>
+
+            <h1>Together We Can Make a Difference</h1>
+
+            <p>
+                Synergy Six brings people together through education,
+                technology, teamwork and community activities.
+            </p>
+
+            <button id="exploreBtn">
+                Explore Our Work ↓
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- What We Do -->
+    <section class="community-section" id="communityWork">
+
+        <div class="section-title">
+
+            <span>WHAT WE DO</span>
+
+            <h2>Helping Our Community Grow</h2>
+
+            <p>
+                We believe that working together can create positive
+                change in our community.
+            </p>
+
+        </div>
+
+
+        <div class="community-cards">
+
+            <!-- Education -->
+            <div class="community-card">
+
+                <div class="icon">📚</div>
+
+                <h3>Education</h3>
+
+                <p>
+                    We encourage learning by sharing knowledge,
+                    supporting learners and promoting education.
+                </p>
+
+                <button class="learnBtn"
+                    data-message="Education helps people gain knowledge, confidence and new opportunities.">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- Environment -->
+            <div class="community-card">
+
+                <div class="icon">🌱</div>
+
+                <h3>Environment</h3>
+
+                <p>
+                    We encourage environmental responsibility through
+                    clean-up activities and awareness.
+                </p>
+
+                <button class="learnBtn"
+                    data-message="A clean and healthy environment benefits everyone in the community.">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- Teamwork -->
+            <div class="community-card">
+
+                <div class="icon">🤝</div>
+
+                <h3>Teamwork</h3>
+
+                <p>
+                    We bring young people together to share ideas,
+                    solve problems and support each other.
+                </p>
+
+                <button class="learnBtn"
+                    data-message="Teamwork allows people to combine their ideas and skills to achieve more.">
+                    Learn More
+                </button>
+
+            </div>
+
+
+            <!-- Innovation -->
+            <div class="community-card">
+
+                <div class="icon">💡</div>
+
+                <h3>Innovation</h3>
+
+                <p>
+                    We encourage creative ideas and technology
+                    solutions for community challenges.
+                </p>
+
+                <button class="learnBtn"
+                    data-message="Innovation encourages us to find creative solutions to problems around us.">
+                    Learn More
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Community Impact -->
+    <section class="impact-section">
+
+        <div class="section-title">
+
+            <span>OUR IMPACT</span>
+
+            <h2>Building a Better Future</h2>
+
+        </div>
+
+
+        <div class="impact-container">
+
+            <div class="impact-box">
+                <strong id="members">0</strong>
+                <p>Community Members</p>
+            </div>
+
+            <div class="impact-box">
+                <strong id="projects">0</strong>
+                <p>Community Projects</p>
+            </div>
+
+            <div class="impact-box">
+                <strong id="skills">0</strong>
+                <p>Skills Shared</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Message -->
+    <section class="message-section">
+
+        <h2>🌍 Our Community Mission</h2>
+
+        <p id="missionText">
+            Click the button to discover our mission.
+        </p>
+
+        <button id="missionBtn">
+            Show Mission
+        </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>🤝 Synergy Six</h2>
+
+        <p>
+            Learning • Teamwork • Technology • Community
+        </p>
+
+        <p class="copyright">
+            © 2026 Synergy Six. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>// =========================
+// DARK MODE
+// =========================
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", function () {
+
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+
+        themeBtn.textContent = "☀️";
+
+    } else {
+
+        themeBtn.textContent = "🌙";
+
+    }
+
+});
+
+
+// =========================
+// EXPLORE BUTTON
+// =========================
+
+const exploreBtn = document.getElementById("exploreBtn");
+
+exploreBtn.addEventListener("click", function () {
+
+    document.getElementById("communityWork").scrollIntoView({
+        behavior: "smooth"
+    });
+
+});
+
+
+// =========================
+// LEARN MORE BUTTONS
+// =========================
+
+const learnButtons = document.querySelectorAll(".learnBtn");
+
+learnButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const message = button.getAttribute("data-message");
+
+        alert(message);
+
+    });
+
+});
+
+
+// =========================
+// MISSION BUTTON
+// =========================
+
+const missionBtn = document.getElementById("missionBtn");
+
+const missionText = document.getElementById("missionText");
+
+missionBtn.addEventListener("click", function () {
+
+    missionText.textContent =
+        "Our mission is to empower our community through education, digital skills, teamwork, environmental responsibility and innovation.";
+
+    missionBtn.textContent = "Mission Shown ✓";
+
+});
+
+
+// =========================
+// ANIMATED NUMBERS
+// =========================
+
+function animateNumber(element, target) {
+
+    let current = 0;
+
+    const increment = Math.ceil(target / 50);
+
+    const timer = setInterval(function () {
+
+        current += increment;
+
+        if (current >= target) {
+
+            current = target;
+
+            clearInterval(timer);
+
+        }
+
+        element.textContent = current;
+
+    }, 30);
+
+}
+
+
+animateNumber(
+    document.getElementById("members"),
+    50
+);
+
+animateNumber(
+    document.getElementById("projects"),
+    12
+);
+
+animateNumber(
+    document.getElementById("skills"),
+    25
+);</script>
+<style>/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8f7;
+    color: #172b24;
+    line-height: 1.6;
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    background: #123c2d;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #7ee2a8;
+}
+
+#themeBtn {
+    border: none;
+    background: #ffffff22;
+    color: white;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.community-hero {
+    min-height: 75vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 10%;
+
+    background:
+        linear-gradient(
+            rgba(18, 60, 45, 0.85),
+            rgba(0, 130, 90, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.small-title {
+    letter-spacing: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    border: none;
+
+    background: #00a878;
+    color: white;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #008c65;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.community-section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: auto auto 50px;
+}
+
+.section-title span {
+    color: #00a878;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin: 10px 0;
+}
+
+
+/* =========================
+   COMMUNITY CARDS
+========================= */
+
+.community-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.community-card {
+    background: white;
+
+    padding: 35px 28px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.community-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.community-card h3 {
+    color: #123c2d;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.community-card p {
+    color: #5d6b65;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   IMPACT
+========================= */
+
+.impact-section {
+    padding: 80px 8%;
+    background: #123c2d;
+    color: white;
+}
+
+.impact-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 25px;
+
+    text-align: center;
+}
+
+.impact-box {
+    padding: 30px;
+    background: #ffffff12;
+    border-radius: 18px;
+}
+
+.impact-box strong {
+    font-size: 45px;
+    color: #7ee2a8;
+}
+
+
+/* =========================
+   MISSION
+========================= */
+
+.message-section {
+    text-align: center;
+
+    padding: 80px 10%;
+
+    background: #e7f6ef;
+}
+
+.message-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.message-section p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #071e16;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+.copyright {
+    margin-top: 20px;
+    color: #aabbb3;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #101815;
+    color: #eeeeee;
+}
+
+body.dark-mode .community-card {
+    background: #1b2521;
+}
+
+body.dark-mode .community-card h3 {
+    color: #7ee2a8;
+}
+
+body.dark-mode .community-card p {
+    color: #c7d1cc;
+}
+
+body.dark-mode .message-section {
+    background: #17221e;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+}</style>
+
+</body>
+
+</html>

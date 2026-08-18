@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Synergy Six | Community Benefits</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            🤝 Synergy Six
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="community.html">Community</a>
+            <a href="skills.html">Digital Skills</a>
+            <a href="benefits.html" class="active">Benefits</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="themeBtn">🌙</button>
+
+    </header>
+
+
+    <!-- Hero -->
+    <section class="benefits-hero">
+
+        <div>
+
+            <span class="small-title">
+                OUR COMMUNITY IMPACT
+            </span>
+
+            <h1>
+                Creating Opportunities for Everyone
+            </h1>
+
+            <p>
+                Synergy Six aims to empower community members
+                through digital skills, education, teamwork
+                and innovation.
+            </p>
+
+            <button id="impactBtn">
+                See Our Impact ↓
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Importance -->
+    <section class="benefits-section" id="impact">
+
+        <div class="section-title">
+
+            <span>WHY IT MATTERS</span>
+
+            <h2>
+                How Synergy Six Can Help the Community
+            </h2>
+
+            <p>
+                Our goal is to give people useful knowledge,
+                skills and opportunities that can help them
+                in everyday life and in the future.
+            </p>
+
+        </div>
+
+
+        <div class="benefits-grid">
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">💻</div>
+
+                <h3>Digital Empowerment</h3>
+
+                <p>
+                    Community members can learn how to use
+                    computers, the internet and digital tools
+                    with greater confidence.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">📚</div>
+
+                <h3>Better Learning</h3>
+
+                <p>
+                    Digital learning can give young people
+                    more opportunities to discover knowledge,
+                    practice skills and create projects.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">🚀</div>
+
+                <h3>Future Opportunities</h3>
+
+                <p>
+                    Learning technology can help people
+                    prepare for future education, careers
+                    and digital opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">🤝</div>
+
+                <h3>Stronger Teamwork</h3>
+
+                <p>
+                    Synergy Six encourages people to work
+                    together, share ideas and support one
+                    another.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">💡</div>
+
+                <h3>Innovation</h3>
+
+                <p>
+                    Members can use their creativity and
+                    technology skills to think about solutions
+                    to community challenges.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-card">
+
+                <div class="benefit-icon">🌍</div>
+
+                <h3>Community Development</h3>
+
+                <p>
+                    By sharing knowledge and working together,
+                    the community can become more connected,
+                    skilled and prepared for the future.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Vision -->
+    <section class="vision-section">
+
+        <div class="vision-content">
+
+            <h2>
+                🌟 Our Vision
+            </h2>
+
+            <p>
+                We want to build a community where young people
+                have access to knowledge, technology and
+                opportunities to learn, create and contribute.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Interactive -->
+    <section class="message-section">
+
+        <h2>
+            💡 Our Goal
+        </h2>
+
+        <p id="goalMessage">
+            Click below to see what Synergy Six believes.
+        </p>
+
+        <button id="goalBtn">
+            Show Our Goal
+        </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h2>🤝 Synergy Six</h2>
+
+        <p>
+            Learning • Technology • Teamwork • Community
+        </p>
+
+        <p class="copyright">
+            © 2026 Synergy Six
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script>// Benefits page buttons
+
+const impactBtn = document.getElementById("impactBtn");
+
+if (impactBtn) {
+
+    impactBtn.addEventListener("click", function () {
+
+        document.getElementById("impact").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+// Goal button
+
+const goalBtn = document.getElementById("goalBtn");
+
+if (goalBtn) {
+
+    goalBtn.addEventListener("click", function () {
+
+        document.getElementById("goalMessage").textContent =
+            "Our goal is to give community members useful digital skills, encourage teamwork and create opportunities for learning and innovation.";
+
+        goalBtn.textContent = "Goal Shown ✓";
+
+    });
+
+}</script>
+<style>/* =========================
+   BENEFITS PAGE
+========================= */
+
+.benefits-hero {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 10%;
+
+    background:
+        linear-gradient(
+            rgba(18, 60, 45, 0.9),
+            rgba(0, 140, 100, 0.9)
+        );
+
+    color: white;
+}
+
+.benefits-hero > div {
+    max-width: 800px;
+}
+
+.benefits-hero h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.benefits-hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Benefits Section */
+
+.benefits-section {
+    padding: 90px 8%;
+}
+
+.benefits-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+
+    gap: 25px;
+}
+
+.benefit-card {
+    background: white;
+
+    padding: 35px 28px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+}
+
+.benefit-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    color: #123c2d;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    color: #5d6b65;
+}
+
+
+/* Vision */
+
+.vision-section {
+    padding: 80px 10%;
+
+    background: #123c2d;
+
+    color: white;
+
+    text-align: center;
+}
+
+.vision-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.vision-content h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.vision-content p {
+    font-size: 19px;
+}
+
+
+/* Dark Mode */
+
+body.dark-mode .benefit-card {
+    background: #1b2521;
+}
+
+body.dark-mode .benefit-card h3 {
+    color: #7ee2a8;
+}
+
+body.dark-mode .benefit-card p {
+    color: #c7d1cc;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .benefits-hero h1 {
+        font-size: 38px;
+    }
+
+    .benefits-hero p {
+        font-size: 17px;
+    }
+
+}</style>
+
+</body>
+
+</html>
